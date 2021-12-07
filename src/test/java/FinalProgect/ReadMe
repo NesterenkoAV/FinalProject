@@ -1,0 +1,7 @@
+Тесты запускаются командой
+
+mvn clean test -Dbrowser=cHrome
+или
+mvn clean test -Dbrowser=Edge
+
+
