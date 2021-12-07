@@ -1,6 +1,6 @@
-package FinalProgect.Pages;
+package FinalProject.Pages;
 
-import FinalProgect.OtusTest.BasePage;
+import FinalProject.OtusTest.BasePage;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage extends BasePage {

@@ -1,7 +1,7 @@
-package FinalProgect.OtusTest;
+package FinalProject.OtusTest;
 
-import FinalProgect.WDFactory.Browsers;
-import FinalProgect.WDFactory.WebDriverFactory;
+import FinalProject.WDFactory.Browsers;
+import FinalProject.WDFactory.WebDriverFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;

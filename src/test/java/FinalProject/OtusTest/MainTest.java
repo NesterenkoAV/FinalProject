@@ -1,8 +1,8 @@
-package FinalProgect.OtusTest;
+package FinalProject.OtusTest;
 
-import FinalProgect.Pages.CalendarOfEventsPage;
-import FinalProgect.Pages.CoursePage;
-import FinalProgect.Pages.MainPage;
+import FinalProject.Pages.CalendarOfEventsPage;
+import FinalProject.Pages.CoursePage;
+import FinalProject.Pages.MainPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;

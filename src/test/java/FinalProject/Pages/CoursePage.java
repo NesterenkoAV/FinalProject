@@ -1,6 +1,6 @@
-package FinalProgect.Pages;
+package FinalProject.Pages;
 
-import FinalProgect.OtusTest.BasePage;
+import FinalProject.OtusTest.BasePage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

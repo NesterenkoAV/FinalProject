@@ -1,4 +1,4 @@
-package FinalProgect.WDFactory;
+package FinalProject.WDFactory;
 
 public enum Browsers {
     CHROME ("chrome"),

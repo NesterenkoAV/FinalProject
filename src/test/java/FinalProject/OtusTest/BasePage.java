@@ -1,4 +1,4 @@
-package FinalProgect.OtusTest;
+package FinalProject.OtusTest;
 
 import org.openqa.selenium.WebDriver;
 
