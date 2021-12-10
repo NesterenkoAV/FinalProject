@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -40,7 +42,7 @@ public class CoursePage extends BasePage {
 
     public void openCurseCard() {
         driver.findElement(By.cssSelector("body")).sendKeys(Keys.PAGE_DOWN);
-        driver.findElement(By.xpath("//img[@alt='Java QA Engineer. Basic foreground']/ancestor::*[3]")).click();
+        driver.findElement(By.xpath("//div[contains(text(),'Java QA Engineer. Basic')]/ancestor::*[1]")).click();
     }
 
     public void checkingCourseAttributes() {

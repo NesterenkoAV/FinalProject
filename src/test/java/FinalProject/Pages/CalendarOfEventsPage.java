@@ -22,20 +22,15 @@ public class CalendarOfEventsPage extends BasePage {
 
     private By Events = By.xpath("//p[contains(text(),'События')]");
     private By CalendarOfEvents = By.xpath("//a[contains(text(),'Календарь мероприятий')]");
-    private By NodeDeveloper = By.xpath("//div[contains(text(),'Node.js Developer')]/ancestor::*[2]");
+    private By NodeDeveloper = By.xpath("//div[contains(text(),'Java Developer. Basic')]/ancestor::*[2]");
     private By AndroidDeveloperProfessional = By.xpath("//div[contains(text(),'Android Developer. Professional')]/ancestor::*[2]");
     private By DifferentNumbers = By.xpath("//div[contains(text(),'Такие разные числа')]/ancestor::*[2]");
-    private By JSCloud = By.xpath("//div[contains(text(),'Разветывание и управление java-сервисами в облаке')]/ancestor::*[2]");
+    private By linuxRouter = By.xpath("//div[contains(text(),'Простой роутер на Linux')]/ancestor::*[2]");
     private By Algorithm = By.xpath("//div[contains(text(),'Алгоритмы и структуры данных')]/ancestor::*[2]");
-
-
     private By systemAnalyst = By.xpath("//div[contains(text(),'«Системный аналитик. Advanced')]/ancestor::*[2]");
-    //    private By FullstackDeveloper = By.xpath("//div[contains(text(),'Fullstack Developer')]/ancestor::*[2]");
     private By EventType = By.cssSelector("path[d*='8.748 0 0 0-.22-.547L1.88 1.15a.75.75 0 0 0-1.06 0z']");
     private By Dod = By.cssSelector("a[title='ДОД']");
-//    private By Event = By.cssSelector("div[class='dod_new-events__list js-dod_new_events']");
-private By Event = By.xpath("//div[@class='dod_new-events__list js-dod_new_events']");
-
+    private By Event = By.xpath("//div[@class='dod_new-events__list js-dod_new_events']");
 
 
     public void openPageCalendarOfEvents() {
@@ -62,7 +57,7 @@ private By Event = By.xpath("//div[@class='dod_new-events__list js-dod_new_event
 
         driver.findElement(Algorithm).sendKeys(Keys.CONTROL, Keys.END);
         WebDriverWait wait4 = new WebDriverWait(driver, 5);
-        WebElement element4 = wait4.until(ExpectedConditions.visibilityOfElementLocated(JSCloud));
+        WebElement element4 = wait4.until(ExpectedConditions.visibilityOfElementLocated(linuxRouter));
         element4.isDisplayed();
     }
 
