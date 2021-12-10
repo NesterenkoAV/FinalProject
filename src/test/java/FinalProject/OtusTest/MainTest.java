@@ -20,10 +20,29 @@ public class MainTest extends BaseTest {
         logger.info("Открыта форма Тестирование");
         coursePage.countCurses();
         logger.info("11 карточке курсов");
+        cleanUP();
+    }
+
+    @Test
+    public void checkingCourseAttributes() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openOtus();
+        logger.info("Сайт открыт");
+        CoursePage coursePage = new CoursePage(driver);
+        coursePage.openPageTesting();
+        logger.info("Открыта форма Тестирование");
         coursePage.openCurseCard();
         logger.info("Открыта карточка курса Java QA Engineer. Basic");
         coursePage.checkingCourseAttributes();
         logger.info("Проверено наличие атрибутов в картчоке курса");
+        cleanUP();
+    }
+
+    @Test
+    public void checkingEventsDate() throws Exception {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openOtus();
+        logger.info("Сайт открыт");
         CalendarOfEventsPage calendarOfEventsPage = new CalendarOfEventsPage(driver);
         calendarOfEventsPage.openPageCalendarOfEvents();
         logger.info("Открыта форма Календарь меропиятий");
@@ -31,7 +50,18 @@ public class MainTest extends BaseTest {
         logger.info("Открыты все меропиятия");
         calendarOfEventsPage.checkingDate();
         logger.info("Даты мероприятий больше или равны текущей дате");
+        cleanUP();
+    }
+
+    @Test
+    public void checkingfilterDod() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openOtus();
+        logger.info("Сайт открыт");
+        CalendarOfEventsPage calendarOfEventsPage = new CalendarOfEventsPage(driver);
+        calendarOfEventsPage.openPageCalendarOfEvents();
         calendarOfEventsPage.filterDod();
         logger.info("Мероприятия отфильтрованы по признаку 'День открыфтых дверей'");
+        cleanUP();
         }
 }

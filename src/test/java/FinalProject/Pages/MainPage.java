@@ -12,4 +12,6 @@ public class MainPage extends BasePage {
     public void openOtus() {
         driver.get(OTUS_URL);
     }
+    
+
 }
