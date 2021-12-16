@@ -22,13 +22,14 @@ public class CalendarOfEventsPage extends BasePage {
 
     private By Events = By.xpath("//p[contains(text(),'События')]");
     private By CalendarOfEvents = By.xpath("//a[contains(text(),'Календарь мероприятий')]");
-    private By NodeDeveloper = By.xpath("//div[contains(text(),'Java Developer. Basic')]/ancestor::*[2]");
-    private By AndroidDeveloperProfessional = By.xpath("//div[contains(text(),'Android Developer. Professional')]/ancestor::*[2]");
+    private By Numbers = By.xpath("//div[contains(text(),'C++ Developer. Professional')]/ancestor::*[2]");
+    private By HowToLog = By.xpath("//div[contains(text(),'Как зайти в IT-компанию и остаться там')]/ancestor::*[2]");
     private By DifferentNumbers = By.xpath("//div[contains(text(),'Такие разные числа')]/ancestor::*[2]");
     private By linuxRouter = By.xpath("//div[contains(text(),'Простой роутер на Linux')]/ancestor::*[2]");
     private By Algorithm = By.xpath("//div[contains(text(),'Алгоритмы и структуры данных')]/ancestor::*[2]");
     private By systemAnalyst = By.xpath("//div[contains(text(),'«Системный аналитик. Advanced')]/ancestor::*[2]");
     private By EventType = By.cssSelector("path[d*='8.748 0 0 0-.22-.547L1.88 1.15a.75.75 0 0 0-1.06 0z']");
+    private By Close = By.cssSelector("div[class*='sticky-banner__close js-sticky-banner-close']");
     private By Dod = By.cssSelector("a[title='ДОД']");
     private By Event = By.xpath("//div[@class='dod_new-events__list js-dod_new_events']");
 
@@ -37,16 +38,16 @@ public class CalendarOfEventsPage extends BasePage {
         driver.findElement(Events).click();
         driver.findElement(CalendarOfEvents).click();
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(NodeDeveloper));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(Numbers));
         element.isDisplayed();
     }
 
     public void showAllEvents() {
-        driver.findElement(NodeDeveloper).sendKeys(Keys.CONTROL, Keys.END);
+        driver.findElement(Numbers).sendKeys(Keys.CONTROL, Keys.END);
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(AndroidDeveloperProfessional));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(HowToLog));
         element.isDisplayed();
-        driver.findElement(AndroidDeveloperProfessional).sendKeys(Keys.CONTROL, Keys.END);
+        driver.findElement(HowToLog).sendKeys(Keys.CONTROL, Keys.END);
         WebDriverWait wait2 = new WebDriverWait(driver, 5);
         WebElement element2 = wait2.until(ExpectedConditions.visibilityOfElementLocated(DifferentNumbers));
         element2.isDisplayed();
@@ -85,15 +86,12 @@ public class CalendarOfEventsPage extends BasePage {
     }
 
     public void filterDod() {
+        driver.findElement(Close).click();
         driver.findElement(EventType).click();
         driver.findElement(Dod).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(Event));
         element.isDisplayed();
-        driver.findElement(NodeDeveloper).sendKeys(Keys.CONTROL, Keys.END);
-        WebDriverWait wait2 = new WebDriverWait(driver, 10);
-        WebElement element2 = wait2.until(ExpectedConditions.visibilityOfElementLocated(systemAnalyst));
-        element2.isDisplayed();
         List<WebElement> allElements = new ArrayList<WebElement>(driver.findElements(Event));
         for (WebElement event : allElements) {
             List<WebElement> contents = event.findElements(By.xpath("//div[@class='dod_new-event-content']"));
