@@ -42,6 +42,9 @@ public class CoursePage extends BasePage {
 
     public void openCurseCard() {
         driver.findElement(By.cssSelector("body")).sendKeys(Keys.PAGE_DOWN);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Java QA Engineer. Basic')]/ancestor::*[1]")));
+        element.isDisplayed();
         driver.findElement(By.xpath("//div[contains(text(),'Java QA Engineer. Basic')]/ancestor::*[1]")).click();
     }
 

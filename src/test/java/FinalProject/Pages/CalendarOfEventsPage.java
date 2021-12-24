@@ -22,9 +22,9 @@ public class CalendarOfEventsPage extends BasePage {
 
     private By Events = By.xpath("//p[contains(text(),'События')]");
     private By CalendarOfEvents = By.xpath("//a[contains(text(),'Календарь мероприятий')]");
-    private By Numbers = By.xpath("//div[contains(text(),'C++ Developer. Professional')]/ancestor::*[2]");
-    private By HowToLog = By.xpath("//div[contains(text(),'Как зайти в IT-компанию и остаться там')]/ancestor::*[2]");
-    private By DifferentNumbers = By.xpath("//div[contains(text(),'Такие разные числа')]/ancestor::*[2]");
+    private By Numbers = By.xpath("//div[contains(text(),'Как аналитику выжить при цифровой трансформации')]/ancestor::*[2]");
+    private By HowToLog = By.xpath("//div[contains(text(),'Открытый урок \"Самые важные навыки аналитика')]/ancestor::*[2]");
+    private By DifferentNumbers = By.xpath("//div[contains(text(),'Открытый урок \"Правильный DAO на Spring JDBC')]/ancestor::*[2]");
     private By linuxRouter = By.xpath("//div[contains(text(),'Простой роутер на Linux')]/ancestor::*[2]");
     private By Algorithm = By.xpath("//div[contains(text(),'Алгоритмы и структуры данных')]/ancestor::*[2]");
     private By systemAnalyst = By.xpath("//div[contains(text(),'«Системный аналитик. Advanced')]/ancestor::*[2]");
